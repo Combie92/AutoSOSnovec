@@ -258,7 +258,7 @@ def build_docx():
     note = doc.add_paragraph()
     note.paragraph_format.space_before = Pt(16)
     note.paragraph_format.space_after = Pt(0)
-    run = note.add_run("Ceny položek R134A a R1234yf jsou ponechány k ručnímu doplnění ve Word kopii.")
+    run = note.add_run("Všechny ceny jsou uvedené bez DPH. Ceny položek R134A a R1234yf jsou ponechány k ručnímu doplnění ve Word kopii.")
     set_font(run, size=9.5, color=GRAY, bold=True)
 
     footer = section.footer.paragraphs[0]
@@ -371,7 +371,7 @@ def build_pdf():
     flow.append(make_pdf_table([["Služba", "Cena"], *ITEMS_AC], [11.1 * cm, 5.4 * cm]))
 
     flow.append(Spacer(1, 14))
-    flow.append(Paragraph(f"<font name='{PDF_FONT_BOLD}' color='#6F747C'>Ceny položek R134A a R1234yf jsou ponechány k ručnímu doplnění ve Word kopii.</font>", body))
+    flow.append(Paragraph(f"<font name='{PDF_FONT_BOLD}' color='#6F747C'>Všechny ceny jsou uvedené bez DPH. Ceny položek R134A a R1234yf jsou ponechány k ručnímu doplnění ve Word kopii.</font>", body))
 
     doc.build(flow, onFirstPage=draw_background, onLaterPages=draw_background)
 
