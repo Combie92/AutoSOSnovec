@@ -772,6 +772,15 @@ h4 {
   gap: 10px;
 }
 
+.form-honey {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .contact-form label {
   color: #171a1f;
   font-weight: 900;

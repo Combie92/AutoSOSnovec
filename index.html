@@ -157,7 +157,12 @@
             </div>
           </article>
 
-          <form class="panel contact-form" id="contactForm">
+          <form class="panel contact-form" id="contactForm" action="https://formsubmit.co/autososnovec@seznam.cz" method="POST">
+            <input type="hidden" name="_subject" value="Nová zpráva z webu AutoSOSnovec">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://www.autososnovec.cz/?zprava=odeslana#kontakt">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="form-honey">
+
             <label for="name" data-i18n="form.name">Jméno</label>
             <input id="name" name="name" type="text" autocomplete="name" required>
 

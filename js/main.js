@@ -1,7 +1,6 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector(".main-nav");
 const navLinks = document.querySelectorAll(".main-nav a");
-const contactForm = document.querySelector("#contactForm");
 const year = document.querySelector("#currentYear");
 const slider = document.querySelector(".facebook-slider");
 const sliderTrack = document.querySelector(".slider-track");
@@ -92,7 +91,7 @@ const translations = {
       phone: "Telefon",
       message: "Zpráva",
       submit: "Odeslat",
-      alert: "Zpráva by byla odeslána.",
+      sent: "Děkujeme, zpráva byla odeslána.",
     },
     footer: {
       company: "Auto Sosnovec s.r.o.",
@@ -182,7 +181,7 @@ const translations = {
       phone: "Phone",
       message: "Message",
       submit: "Send",
-      alert: "The message would be sent.",
+      sent: "Thank you, your message has been sent.",
     },
     footer: {
       company: "Auto Sosnovec s.r.o.",
@@ -308,14 +307,6 @@ if (languageToggle) {
   });
 }
 
-if (contactForm) {
-  contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    alert(translations[currentLanguage].form.alert);
-    contactForm.reset();
-  });
-}
-
 const createGallerySlides = () => {
   const galleryText = translations[currentLanguage].gallery;
   const randomOrder = [...randomGalleryImages].sort(() => Math.random() - 0.5);
@@ -415,3 +406,8 @@ if (slider && sliderTrack) {
 }
 
 applyLanguage(currentLanguage);
+
+if (new URLSearchParams(window.location.search).get("zprava") === "odeslana") {
+  alert(translations[currentLanguage].form.sent);
+  window.history.replaceState(null, "", `${window.location.pathname}${window.location.hash || ""}`);
+}
