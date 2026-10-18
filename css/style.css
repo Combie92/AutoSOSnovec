@@ -249,7 +249,22 @@ iframe {
 
 .about-main {
   display: grid;
-  gap: 0;
+  gap: 24px;
+}
+
+.assistance-partner {
+  width: min(100%, 420px);
+  margin: 0;
+  justify-self: start;
+  border: 1px solid rgba(54, 58, 64, 0.72);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.assistance-partner-image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .gallery-divider {
