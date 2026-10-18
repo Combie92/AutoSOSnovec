@@ -36,7 +36,7 @@ const translations = {
     },
     insurance: {
       label: "Smluvní partner pojišťoven",
-      image: "assets/img/Pojišťovny.png",
+      image: "assets/img/Pojišťovny.png?v=a1d270a5ea45",
     },
     assistance: {
       label: "Partneři asistenční služby: Auto Strž Škoda",
@@ -130,7 +130,7 @@ const translations = {
     },
     insurance: {
       label: "Contracted insurance partners",
-      image: "assets/img/Pojišťovny_en.png",
+      image: "assets/img/Pojišťovny_en.png?v=a50f4d6c1bbf",
     },
     assistance: {
       label: "Assistance service partners: Auto Strž Škoda",
